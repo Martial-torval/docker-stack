@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+
+    blazegraph:
+        image: conjecto/blazegraph
+        ports:
+          - 9999:9999
+        environment:
+            JAVA_XMS: 512m
+            JAVA_XMX: 1g
+        volumes:
+          - ./dataset:/docker-entrypoint-initdb.d
+        ports:
+            - "9999:9999"
+
+    datatourisme:
+        build: docker
+        ports:
+            - "8080:80"
+        restart: always
+        depends_on:
+            - blazegraph
