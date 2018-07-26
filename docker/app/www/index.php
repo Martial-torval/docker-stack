@@ -5,16 +5,24 @@ header('Access-Control-Allow-Credentials: true', true);
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Headers: Content-Type');
 
-if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
-    return;
+$payload = null;
+
+switch($_SERVER['REQUEST_METHOD']) {
+    case "POST":
+        if (isset($_SERVER['CONTENT_TYPE']) && $_SERVER['CONTENT_TYPE'] === 'application/json') {
+            $rawBody = file_get_contents('php://input');
+            $requestData = json_decode($rawBody ?: '', true);
+        } else {
+            $requestData = $_POST;
+        }
+        break;
+    case "GET":
+        $requestData = $_GET;
+        break;
+    default:
+        exit;
 }
 
-if (isset($_SERVER['CONTENT_TYPE']) && $_SERVER['CONTENT_TYPE'] === 'application/json') {
-    $rawBody = file_get_contents('php://input');
-    $requestData = json_decode($rawBody ?: '', true);
-} else {
-    $requestData = $_POST;
-}
 $payload = isset($requestData['query']) ? $requestData['query'] : null;
 
 require_once __DIR__.'/../vendor/autoload.php';
