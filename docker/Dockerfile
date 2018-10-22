@@ -2,7 +2,7 @@ FROM php
 MAINTAINER Conjecto <contact@conjecto.com>
 
 RUN apt-get update && apt-get install -y \
-  --no-install-recommends git zip zlib1g-dev
+  --no-install-recommends git zip zlib1g-dev wget
 
 RUN docker-php-ext-install -j$(nproc) zip
 
@@ -11,9 +11,11 @@ WORKDIR /var/app/
 
 # install composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-RUN php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-RUN php composer-setup.php
-RUN php -r "unlink('composer-setup.php');"
+RUN \
+    EXPECTED_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig) && \
+    php -r "if (hash_file('SHA384', 'composer-setup.php') === '${EXPECTED_SIGNATURE}') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" && \
+    php composer-setup.php && \
+    php -r "unlink('composer-setup.php');"
 
 # install vendors
 RUN php composer.phar install
