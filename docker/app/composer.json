@@ -8,6 +8,6 @@
     ],
     "require": {
         "php": "^7.0",
-        "datatourisme/api": "^1.0"
+        "datatourisme/api": "dev-feature/ontology-v2"
     }
 }
