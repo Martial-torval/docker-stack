@@ -1,4 +1,4 @@
-FROM php
+FROM php:7.2
 MAINTAINER Conjecto <contact@conjecto.com>
 
 RUN apt-get update && apt-get install -y \
