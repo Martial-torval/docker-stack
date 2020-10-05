@@ -8,8 +8,7 @@ services:
         ports:
           - 9999:9999
         environment:
-            JAVA_XMS: 512m
-            JAVA_XMX: 1g
+            JAVA_OPTS: "-Xms512m -Xmx1g"
         volumes:
           - ./dataset:/docker-entrypoint-initdb.d
 

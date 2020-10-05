@@ -62,6 +62,8 @@ données lors de la création du conteneur Docker.
 | &nbsp;&nbsp;&nbsp;/data/         | Répertoire où copier les données sémantiques (ttl, nt, n3, xml, gz...) |
 | &nbsp;&nbsp;&nbsp;/RWSTore.properties    | Configuration de la base de données pour ce namespace namespace |
 
+> **Si vous choisissez de charger la base complète il faut augmenter la mémoire Java dédiée à la base de données. Pour ce faire vous pouvez éditer le fichier `docker-compose.yml` et changer la valeur de `JAVA_OPTS` en `-Xms2g -Xmx3g`**
+
 ### Lancement de l'environnement
 
 Vous pouvez maintenant lancer l'environnement :
