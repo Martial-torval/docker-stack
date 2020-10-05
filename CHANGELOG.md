@@ -4,6 +4,11 @@ Tous les changements notables apportés à ce projet seront documentés dans ce 
 Le format est basé sur [Keep a Changelog](http://keepachangelog.com/fr/1.0.0/)
 et ce projet adhère à [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.0.1] - 2020-10-05
+
+### Modifications
+- Correction de la documentation relative aux options java
+
 ## [2.0.0] - 2019-01-14
 
 ### Modifications
