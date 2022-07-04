@@ -4,6 +4,12 @@ Tous les changements notables apportés à ce projet seront documentés dans ce 
 Le format est basé sur [Keep a Changelog](http://keepachangelog.com/fr/1.0.0/)
 et ce projet adhère à [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.0.0] - 2022-07-04
+
+### Modifications
+- Utilisation de datatourisme/api 3.0.0
+- Passage à PHP 7.4
+
 ## [2.0.1] - 2020-10-05
 
 ### Modifications

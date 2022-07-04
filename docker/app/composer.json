@@ -7,7 +7,7 @@
         }
     ],
     "require": {
-        "php": "^7.0",
-        "datatourisme/api": "^2.0"
+        "php": "^7.4",
+        "datatourisme/api": "^3.0"
     }
 }

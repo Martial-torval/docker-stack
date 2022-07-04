@@ -1,7 +1,7 @@
 
 <p align="center">
-  <a href="https://www.datatourisme.gouv.fr" target="_blank">
-    <img alt="DATAtourisme" src="https://framagit.org/datatourisme/api/raw/master/docs/_media/logo.png">
+  <a href="https://www.datatourisme.fr" target="_blank">
+    <img alt="DATAtourisme" src="https://gitlab.adullact.net/adntourisme/datatourisme/api/raw/master/docs/_media/logo.png">
   </a>
 </p>
 
@@ -9,7 +9,7 @@
   La plateforme <strong>OPEN DATA</strong> de l'information touristique
 </p>
 
-<p align="center"><a href="https://www.datatourisme.gouv.fr/">https://www.datatourisme.gouv.fr</a></p>
+<p align="center"><a href="https://www.datatourisme.fr/">https://www.datatourisme.fr</a></p>
 
 
 # Environnement full-stack Docker
@@ -18,13 +18,13 @@ Ce projet contient un environnement [docker-compose](https://docs.docker.com/com
 services suivants :
 
 * La base de données [Blazegraph](http://www.blazegraph.com)
-* L'[API DATAtourisme](https://framagit.org/datatourisme/api) associée à :
+* L'[API DATAtourisme](https://gitlab.adullact.net/adntourisme/datatourisme/api) associée à :
     * Un point d'accès HTTP GraphQL
     * [GraphiQL](https://github.com/graphql/graphiql), une interface visuelle de conception de requête
     * [Voyager](https://github.com/APIs-guru/graphql-voyager), un visualisateur de schéma sous forme de graphe.
 
 Ce stack vous permet de mettre rapidement en place un environnement de restitution des données touristiques
-téléchargées à partir de la [plateforme diffuseur](https://diffuseur.datatourisme.gouv.fr).
+téléchargées à partir de la [plateforme diffuseur](https://diffuseur.datatourisme.fr).
 
 ## Utilisation
 
@@ -41,7 +41,7 @@ Par défaut, vous devrez rendre disponible les ports 8080 et 9999.
 
 Pour vous servir de l'environnement, vous devez d'abord récupérer des données touristiques :
 
-1. Connectez-vous à la [plateforme diffuseur](https://diffuseur.datatourisme.gouv.fr). Il sera nécessaire de
+1. Connectez-vous à la [plateforme diffuseur](https://diffuseur.datatourisme.fr). Il sera nécessaire de
 créer un compte s'il s'agit de votre première connexion.
 2. Créez et configurez un flux de données à l'aide de l'éditeur visuel de requête.
 3. Configurez le flux pour utiliser un format **compatible avec l'API** :
@@ -74,7 +74,7 @@ $ docker-compose up
 
 Ces commandes lanceront deux serveurs :
  - un serveur [Blazegraph](https://www.blazegraph.com/) sur le port 9999 chargé de vos données.
- - un serveur incluant l'[API DATAtourisme](https://framagit.org/datatourisme/api) sur le port 8080.
+ - un serveur incluant l'[API DATAtourisme](https://gitlab.adullact.net/adntourisme/datatourisme/api) sur le port 8080.
 
 Vous pouvez accèder aux interfaces suivantes :
 
@@ -98,11 +98,11 @@ Lorsque vous souhaitez mettre à jour les données de votre environnement, vous 
 
 ## Liens
 
-* [API DATAtourisme](https://framagit.org/datatourisme/api)
+* [API DATAtourisme](https://gitlab.adullact.net/adntourisme/datatourisme/api)
 * [Documentation de l'API](https://datatourisme.frama.io/api)
-* [Plateforme diffuseur](https://diffuseur.datatourisme.gouv.fr)
+* [Plateforme diffuseur](https://diffuseur.datatourisme.fr)
 * Centre de support
 
-## License
+## Licence
 
 MIT License
