@@ -18,6 +18,7 @@ RUN \
     php -r "unlink('composer-setup.php');"
 
 # install vendors
+ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN php composer.phar install
 
 # run server

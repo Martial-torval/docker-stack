@@ -4,6 +4,11 @@ Tous les changements notables apportés à ce projet seront documentés dans ce 
 Le format est basé sur [Keep a Changelog](http://keepachangelog.com/fr/1.0.0/)
 et ce projet adhère à [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.1.0] - 2022-12-08
+
+### Corrections
+- Support des variables dans le point d'accès GraphQL
+
 ## [3.0.0] - 2022-07-04
 
 ### Modifications
