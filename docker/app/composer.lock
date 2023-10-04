@@ -8,11 +8,11 @@
     "packages": [
         {
             "name": "datatourisme/api",
-            "version": "3.1.5",
+            "version": "3.1.6",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.adullact.net/adntourisme/datatourisme/api",
-                "reference": "6b48ea23dabe089c654476d8d3c0e038307229d2"
+                "reference": "34fb0cf2d68dcda4903fb68f64e260e10167642f"
             },
             "require": {
                 "easyrdf/easyrdf": "^1.1.1",
@@ -57,7 +57,7 @@
                 "docs": "https://datatourisme.frama.io/api/",
                 "source": "https://framagit.org/datatourisme/api"
             },
-            "time": "2023-05-11T10:23:53+00:00"
+            "time": "2023-10-04T09:33:52+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
